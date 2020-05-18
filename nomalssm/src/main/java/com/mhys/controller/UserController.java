@@ -48,6 +48,8 @@ public class UserController {
     }
     @RequestMapping("/addOrUpdate")
     public ModelAndView addOrUpdate(@RequestParam("sid") String id,User user){
+
+
         if(id!=null && !id.equals("")){//修改
             user.setId(Integer.parseInt(id));
             int count=userService.updateById(user);
